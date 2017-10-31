@@ -79,6 +79,7 @@ public class WebServiceActivityBehavior extends AbstractBpmnActivityBehavior {
 
     public WebServiceActivityBehavior(BpmnModel bpmnModel) {
         itemDefinitionMap.put("http://www.w3.org/2001/XMLSchema:string", new ItemDefinition("http://www.w3.org/2001/XMLSchema:string", new ClassStructureDefinition(String.class)));
+        fillDefinitionMaps(bpmnModel);
     }
 
     public void execute(DelegateExecution execution) {
@@ -109,8 +110,6 @@ public class WebServiceActivityBehavior extends AbstractBpmnActivityBehavior {
         }
 
         MessageInstance message = null;
-
-        fillDefinitionMaps(bpmnModel);
 
         Operation operation = operationMap.get(operationRef);
 
