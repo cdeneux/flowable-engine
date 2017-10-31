@@ -17,6 +17,7 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.flowable.bpmn.model.Activity;
 import org.flowable.bpmn.model.BoundaryEvent;
+import org.flowable.bpmn.model.BpmnModel;
 import org.flowable.bpmn.model.BusinessRuleTask;
 import org.flowable.bpmn.model.CallActivity;
 import org.flowable.bpmn.model.CancelEventDefinition;
@@ -174,12 +175,14 @@ public class DefaultActivityBehaviorFactory extends AbstractBehaviorFactory impl
                 getSkipExpressionFromServiceTask(serviceTask), serviceTask.getResultVariableName(), serviceTask.getMapExceptions());
     }
 
-    public WebServiceActivityBehavior createWebServiceActivityBehavior(ServiceTask serviceTask) {
-        return new WebServiceActivityBehavior();
+    @Override
+    public WebServiceActivityBehavior createWebServiceActivityBehavior(ServiceTask serviceTask, BpmnModel bpmnModel) {
+        return new WebServiceActivityBehavior(bpmnModel);
     }
 
-    public WebServiceActivityBehavior createWebServiceActivityBehavior(SendTask sendTask) {
-        return new WebServiceActivityBehavior();
+    @Override
+    public WebServiceActivityBehavior createWebServiceActivityBehavior(SendTask sendTask, BpmnModel bpmnModel) {
+        return new WebServiceActivityBehavior(bpmnModel);
     }
 
     public MailActivityBehavior createMailActivityBehavior(ServiceTask serviceTask) {
