@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<name>Flowable</name>
@@ -14,7 +13,7 @@
 	</parent>
 
 	<packaging>pom</packaging>
-	<version>6.0.1-PETALS-1-SNAPSHOT</version>
+	<version>6.0.1-PETALS-1</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.version>1.7</jdk.version>
@@ -53,7 +52,7 @@
 			${flowable.artifact}*,
 			${flowable.osgi.export.additional}
 		</flowable.osgi.export.pkg>
-		<flowable.osgi.private.pkg></flowable.osgi.private.pkg>
+		<flowable.osgi.private.pkg />
 		<flowable.osgi.version>version=${project.version}</flowable.osgi.version>
 		<flowable.osgi.split.pkg>-split-package:=first</flowable.osgi.split.pkg>
 		<flowable.osgi.import>${flowable.osgi.import.pkg}</flowable.osgi.import>
@@ -62,7 +61,7 @@
 		<flowable.osgi.exclude.dependencies>false</flowable.osgi.exclude.dependencies>
 		<flowable.osgi.remove.headers>Ignore-Package,Include-Resource,Private-Package,Bundle-DocURL</flowable.osgi.remove.headers>
 		<flowable.osgi.include.resource>{maven-resources}</flowable.osgi.include.resource>
-		<flowable.osgi.embed></flowable.osgi.embed>
+		<flowable.osgi.embed />
 	</properties>
 
 	<dependencyManagement>
@@ -957,7 +956,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
@@ -1497,5 +1496,6 @@
 		<url>git@github.com:flowable/flowable-engine.git</url>
 		<connection>scm:git:git@github.com:flowable/flowable-engine.git</connection>
 		<developerConnection>scm:git:git@github.com:flowable/flowable-engine.git</developerConnection>
-	</scm>
+	  <tag>flowable-6.0.1-PETALS-1</tag>
+  </scm>
 </project>
