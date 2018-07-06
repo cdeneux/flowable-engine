@@ -981,6 +981,7 @@
 		<module>modules/flowable-idm-spring</module>
 		<module>modules/flowable-rest</module>
 		<module>modules/flowable-common-rest</module>
+		<module>modules/flowable-ui-admin</module>
 	</modules>
 
 	<build>
