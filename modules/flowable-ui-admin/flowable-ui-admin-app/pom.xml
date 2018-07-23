@@ -1,5 +1,4 @@
- <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <name>Flowable UI Admin</name>
@@ -9,7 +8,7 @@
     <parent>
       <groupId>org.ow2.petals.flowable</groupId>
       <artifactId>flowable-ui-admin</artifactId>
-      <version>6.2.1-PETALS-0-SNAPSHOT</version>
+      <version>6.2.1-PETALS-0</version>
     </parent>
 
     <properties>
@@ -186,9 +185,7 @@
                                 <configuration>
                                     <tasks>
                                         <echo message="updating db configuration to db ${database}" />
-                                        <copy file="${user.home}/.flowable/enterprise/build.flowable-admin.${database}.properties"
-                                              tofile="target/test-classes/META-INF/flowable-admin/TEST-db.properties"
-                                              overwrite="true" />
+                                        <copy file="${user.home}/.flowable/enterprise/build.flowable-admin.${database}.properties" tofile="target/test-classes/META-INF/flowable-admin/TEST-db.properties" overwrite="true" />
                                     </tasks>
                                 </configuration>
                             </execution>
@@ -724,7 +721,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
