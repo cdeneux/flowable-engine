@@ -6,10 +6,10 @@
     <artifactId>flowable-spring</artifactId>
 
     <parent>
-        <groupId>org.flowable</groupId>
+        <groupId>org.ow2.petals.flowable</groupId>
         <artifactId>flowable-root</artifactId>
         <relativePath>../..</relativePath>
-        <version>6.4.2</version>
+        <version>6.4.2-PETALS-0-SNAPSHOT</version>
     </parent>
 
     <properties>
@@ -90,15 +90,15 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.flowable</groupId>
+            <groupId>org.ow2.petals.flowable</groupId>
             <artifactId>flowable-engine</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.flowable</groupId>
+            <groupId>org.ow2.petals.flowable</groupId>
             <artifactId>flowable-spring-common</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.flowable</groupId>
+            <groupId>org.ow2.petals.flowable</groupId>
             <artifactId>flowable-job-spring-service</artifactId>
         </dependency>
         <dependency>
@@ -168,12 +168,12 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.flowable</groupId>
+            <groupId>org.ow2.petals.flowable</groupId>
             <artifactId>flowable-idm-spring</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.flowable</groupId>
+            <groupId>org.ow2.petals.flowable</groupId>
             <artifactId>flowable-idm-spring-configurator</artifactId>
             <scope>test</scope>
         </dependency>
